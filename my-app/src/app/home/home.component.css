@@ -1,0 +1,111 @@
+/* Hero Section Styling */
+.hero {
+  /* background-color: #40e0d0ff; */
+  /* background-image: url('/images/pexels-raymond-petrik-1448389535-27706640.jpg'); */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: #fffff0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  animation: slideImages 15s infinite; /* Animation to cycle images */
+}
+
+.hero-content {
+  max-width: 700px;
+  /* background: rgb(64, 224, 208, 0); */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-family: 'Lora', serif;
+  margin-bottom: 20px;
+  font-weight: bolder;
+  color:#1f305eff;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 30px;
+  color: #fffff0ff;
+}
+
+.cta-btn {
+  text-decoration: none;
+  color: #fffff0ff;
+  background-color: #800000;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #1f305eff;
+}
+
+/* Features Section Styling */
+.features {
+  padding: 50px 20px;
+  background-color: #fffff0ff;
+  text-align: center;
+}
+
+.features h3 {
+  font-size: 2.5rem;
+  font-family: 'Lora', serif;
+  margin-bottom: 40px;
+}
+
+.feature-item {
+  display: inline-block;
+  width: 30%;
+  margin: 20px;
+  /* background-color: var(--timberwolf); */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item:hover{
+  background-color: rgb(52, 52, 52, 0.3) ;
+}
+
+.feature-item h4 {
+  font-size: 1.8rem;
+  color: #1f305eff;
+  font-family: 'Lora', serif;
+  margin-bottom: 15px;
+}
+
+.feature-item p {
+  font-size: 1.1rem;
+  color: #343434ff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Keyframe animation for image sliding */
+@keyframes slideImages {
+  0% {
+    background-image: url('/images/image1.jpg');
+  }
+  33% {
+    background-image: url('/images/image2.jpg');
+  }
+  66% {
+    background-image: url('/images/image3.jpg');
+  }
+  100% {
+    background-image: url('/images/image4.jpg');
+  }
+}
+

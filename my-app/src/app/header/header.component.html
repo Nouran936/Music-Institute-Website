@@ -1,0 +1,19 @@
+<header>
+  <div class="container">
+    <div class="logo">
+      <img src="images/lyreMaroonCropped.png" alt="Music Academy Logo">
+      <h1>Kythara Institute for Music</h1>
+    </div>
+    <nav>
+      <a routerLink="/home" routerLinkActive="active">Home</a>
+      <a routerLink="/about" routerLinkActive="active">About Us</a>
+      <a routerLink="/courses" routerLinkActive="active">Courses</a>
+      <a routerLink="/gallery-events" routerLinkActive="active">Gallery/Events</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact Us</a>
+      <!-- <a routerLink="/login" routerLinkActive="active">LogIn</a> -->
+      <li *ngIf="!isLoggedIn()"><a routerLink="/login">Login</a></li>
+      <li *ngIf="!isLoggedIn()"><a routerLink="/register">Register</a></li>
+      <li *ngIf="isLoggedIn()"><a (click)="logout()">Logout</a></li>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,33 @@
+<h2 class="page-title">View Messages</h2>
+<p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+<div class="messages-container">
+  <table class="messages-table">
+    <thead>
+      <tr>
+        <th>Sender</th>
+        <th>Message</th>
+        <th>Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let message of messages">
+        <td>{{ message.name }}</td>
+        <td>{{ message.message | slice:0:50 }}...</td>
+        <td>{{ message.date | date:'short' }}</td>
+        <td>
+          <button class="view-btn" (click)="viewMessage(message._id)">View Message</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div *ngIf="selectedMessage" class="message-details">
+  <h3>Message Details</h3>
+  <p><strong>Sender:</strong> {{ selectedMessage.name }}</p>
+  <p><strong>Message:</strong> {{ selectedMessage.message }}</p>
+</div>
+

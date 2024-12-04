@@ -1,0 +1,128 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.courses-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px; /* Space for the footer */
+}
+
+.courses-grid {
+  display: flex;
+  flex: wrap;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+
+
+.course-card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-title {
+  font-size: 1.5rem;
+  color: #343434; /* Jet color */
+  margin-bottom: 10px;
+}
+
+.course-description {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.btn {
+  background-color: #FF7900; /* Turquoise color */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1f305e; /* Delft Blue color */
+}
+
+@media (max-width: 768px) {
+  .courses-grid {
+    grid-template-columns: 1fr 1fr; /* Two columns on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-grid {
+    grid-template-columns: 1fr; /* One column on mobile devices */
+  }
+}
+
+.filter-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.search-bar {
+  flex: 2;
+  max-width: 400px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.category-filter {
+  flex: 1;
+  max-width: 200px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination-controls .btn {
+  padding: 8px 16px;
+  background-color: #ff7900; /* Turquoise */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination-controls .btn[disabled] {
+  background-color: #d3d3d3; /* Timberwolf */
+  cursor: not-allowed;
+}
+
+.pagination-controls span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+

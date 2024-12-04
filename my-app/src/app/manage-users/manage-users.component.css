@@ -1,0 +1,51 @@
+.manage-users-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.manage-users-container h2 {
+  font-size: 2rem;
+  color: #1f305eff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #343434;
+  color: #ffffff;
+}
+
+button {
+  padding: 5px 10px;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #1f305eff;
+  color: white;
+  border-radius: 3px;
+}
+
+.delete-button {
+  background-color: #800000ff;
+  color: white;
+  border-radius: 3px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}

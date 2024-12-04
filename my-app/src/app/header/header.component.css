@@ -1,0 +1,55 @@
+/* Apply font-family from Google Fonts */
+body {
+  font-family: 'Lora', serif;
+}
+
+/* Styling the header */
+header {
+  background-color: #800000;
+  padding: 20px;
+  color: #fffff0ff;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styling */
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  width: 100px; /* Logo size */
+  height: auto;
+  margin-right: 10px; /* Space between logo and text */
+}
+
+header .logo h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Navigation Styling */
+nav {
+  display: flex;
+  gap: 30px; /* Space between nav links */
+}
+
+nav a {
+  color: #fffff0ff; /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  color: #FF7900; /* Hover effect on links */
+}
+
+nav .active {
+  font-weight: bold; /* Active link styling */
+  color: #FF7900;
+}

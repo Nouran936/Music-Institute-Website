@@ -1,0 +1,24 @@
+<div *ngIf="course; else loading" class="course-details-container">
+  <h2 class="course-title">{{course.name}}</h2>
+
+  <div class="course-details">
+    <p><strong>Description:</strong>{{course.description}}</p>
+    <p><strong>Duration:</strong>{{course.duration}}</p>
+    <p><strong>Price:</strong>${{course.price}}</p>
+    <p><strong>Instructor:</strong>{{course.instructor}}</p>
+    <p><strong>Category:</strong> {{ course.category }}</p>
+    <p><strong>Level:</strong> {{ course.level }}</p>
+    <p><strong>Syllabus:</strong>{{course.syllabus}}</p>
+    <p><strong>Schedule:</strong>{{course.schedule}}</p>
+  </div>
+
+  <div class="buttons">
+    <button class="btn back-btn" (click)="goBack()">Back to courses</button>
+    <button class="btn enroll-btn" (click)="enrollNow()">Enroll Now</button>
+  </div>
+
+</div>
+
+<ng-template #loading>
+  <p>Loading course details..</p>
+</ng-template>

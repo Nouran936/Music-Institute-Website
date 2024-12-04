@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #fffff0ff; /* Ivory - background color for the whole page */
+  color: #343434ff; /* Jet - text color for readability */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+/* Utility classes for padding/margins */
+.section-padding {
+  padding: 40px;
+}
+
+.section-margin {
+  margin: 20px 0;
+}
+
+/* Heading styling */
+h1, h2, h3 {
+  color: #343434ff; /* Jet - dark color for headings */
+}
+
+h1 {
+  color: #fffff0ff; /* Maroon - primary heading color */
+  font-size: 36px;
+}
+
+h2 {
+  color: #1f305eff; /* Delft Blue - for secondary headings */
+  font-size: 28px;
+}
+
+h3 {
+  color: #FF7900; /* Turquoise - for tertiary headings */
+  font-size: 24px;
+}
+
+/* Body text styling */
+p {
+  color: #343434ff; /* Jet - body text color */
+  font-size: 16px;
+}
+

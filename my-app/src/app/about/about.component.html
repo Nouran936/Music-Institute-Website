@@ -1,0 +1,70 @@
+<div class="about-us-container">
+  <section class="basic-info">
+    <div class="info-section">
+      <h2>Institute History</h2>
+      <div class="text-with-image">
+        <p>The institute has been established in 1988 and the number of the classrooms at this time was only 5 rooms
+          in one branch specialized in teaching music and painting, now the institute became a 98 classrooms
+          specialized in music and painting, and distributors on 9 branches and 11 hall, specified for ballet,
+          gymnastics and taekwondo and distributed on 4 branches. Our institute was founded with the goal of
+          nurturing musical talent and promoting music education. Over the years, we have grown into one of
+          the most respected music institutions in the region.</p>
+        <img src="/images/musicLearnersCartoon.jpg" alt="Institute History">
+      </div>
+    </div>
+
+    <div class="info-section">
+      <h2>Mission</h2>
+      <div class="text-with-image">
+        <p>Our mission is to provide high-quality music education, fostering creativity and excellence in every student.</p>
+        <img src="/images/pexels-tima-miroshnichenko-6671610.jpg" alt="Our Mission">
+      </div>
+    </div>
+
+    <div class="info-section">
+      <h2>Vision</h2>
+      <div class="text-with-image">
+        <p>We aim to be a global leader in music education, empowering students with the knowledge and skills
+          to make a positive impact in the music world.</p>
+        <img src="/images/pexels-shvetsa-11368518.jpg" alt="Our Vision">
+      </div>
+    </div>
+  </section>
+
+
+  <section class="achievements">
+    <h2>Our Achievements</h2>
+    <div class="achievement-cards">
+      <div class="achievement-card" *ngFor="let achievement of achievements">
+        <img class="achievement-logo" src="{{achievement.icon}}" alt="{{achievement.title}}">
+        <h3>{{achievement.title}}</h3>
+        <p>{{achievement.description}}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <h2>Meet Our Team</h2>
+    <div class="team-cards">
+      <div class="team-card" *ngFor="let member of teamMembers">
+        <img src="{{member.photo}}" alt="{{member.name}}'s photo" class="team-photo">
+        <h3>{{member.name}}</h3>
+        <p>{{member.position}}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <h2>What Our Students Say?</h2>
+    <div class="review-cards">
+      <div class="review-card" *ngFor="let review of clientReviews">
+        <img src={{review.photo}} alt="{{review.name}}'s photo" class="review-photo">
+        <p class="review-text">{{review.text}}</p>
+        <p class="review-name">{{review.name}}</p>
+        <p class="review-position">{{review.position}}</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+

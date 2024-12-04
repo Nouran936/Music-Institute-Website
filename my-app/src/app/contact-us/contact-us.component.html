@@ -1,0 +1,89 @@
+<div class="contact-us-form">
+  <h2>Contact Us</h2>
+
+  <div *ngIf="successMessage" class="success-message">{{successMessage}}</div>
+  <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
+
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" formControlName="name" type="text" class="form-control">
+      <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+        <small *ngIf="contactForm.get('name')?.errors?.['required']">Name is required.</small>
+        <small *ngIf="contactForm.get('name')?.errors?.['minLength']">Name must be at least 3 characters.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" formControlName="email" type="email" class="form-control">
+      <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+        <small *ngIf="contactForm.get('email')?.errors?.['required']">Email is required.</small>
+        <small *ngIf="contactForm.get('email')?.errors?.['email']">Please enter a valid email.</small>
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" formControlName="message" class="form-control"></textarea>
+      <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+        <small *ngIf="contactForm.get('message')?.errors?.['required']">Message is required.</small>
+        <small *ngIf="contactForm.get('message')?.errors?.['minLength']">Message must be at least 10 characters long</small>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="contactForm.invalid || loading">
+      <span *ngIf="loading">Sending...</span>
+      <span *ngIf="!loading">Submit</span>
+    </button>
+
+  </form>
+
+
+  <div class="map-container">
+    <h2>Our Location</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAPS_EMBED_URL" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+  <div class="contact-info">
+    <h2>Contact Information</h2>
+    <p><strong>Phone:</strong> +123 456 7890</p>
+    <p><strong>Email:</strong> contact&#64;kytharaInstitute.com</p>
+    <p><strong>Address:</strong> 123 Music Academy St, New York, NY</p>
+  </div>
+
+  <div class="branches">
+    <h2>Our Branches</h2>
+    <div *ngFor="let branch of branches" class="branch">
+      <h4>{{ branch.name }}</h4>
+      <p><strong>Address:</strong> {{ branch.address }}</p>
+      <p><strong>Phone:</strong> {{ branch.phone }}</p>
+      <p><strong>Email:</strong> {{ branch.email }}</p>
+    </div>
+  </div>
+
+
+  <div class="social-media">
+    <h2>Follow Us</h2>
+    <a href="https://www.facebook.com/kythara1988/" target="_blank">Facebook</a> |
+    <a href="https://www.instagram.com/kythara_institute/" target="_blank">Instagram</a>
+  </div>
+
+  <div class="faq">
+    <h3>Frequently Asked Questions</h3>
+    <div class="faq-item">
+      <h4>What are the opening hours?</h4>
+      <p>We are open Monday to Friday from 9 AM to 7 PM.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do you offer online lessons?</h4>
+      <p>Yes, we offer both in-person and online music lessons.</p>
+    </div>
+  </div>
+
+
+
+</div>

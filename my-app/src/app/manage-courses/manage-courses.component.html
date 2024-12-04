@@ -1,0 +1,85 @@
+<h2>Manage Courses</h2>
+<p *ngIf="errorMessage">{{ errorMessage }}</p>
+
+<form (ngSubmit)="addCourse()">
+  <label for="name">Course Name:</label>
+  <input [(ngModel)]="newCourse.name" name="name" required />
+  <br>
+
+  <label for="description">Description:</label>
+  <input [(ngModel)]="newCourse.description" name="description" required />
+  <br>
+
+  <label for="category">Category:</label>
+  <input [(ngModel)]="newCourse.category" name="category" required />
+  <br>
+
+  <label for="level">Level:</label>
+  <input [(ngModel)]="newCourse.level" name="level" required />
+  <br>
+
+  <label for="duration">Duration:</label>
+  <input [(ngModel)]="newCourse.duration" name="duration" required />
+  <br>
+
+  <label for="price">Price:</label>
+  <input [(ngModel)]="newCourse.price" name="price" type="number" required />
+  <br>
+
+  <label for="image">Image URL:</label>
+  <input [(ngModel)]="newCourse.image" name="image" required />
+  <br>
+
+  <label for="instructor">Instructor Name:</label>
+  <input [(ngModel)]="newCourse.instructor.name" name="instructorName" required />
+  <br>
+
+  <label for="bio">Instructor Bio:</label>
+  <textarea [(ngModel)]="newCourse.instructor.bio" name="instructorBio" required></textarea>
+  <br>
+
+  <label for="syllabus">Syllabus (comma-separated):</label>
+  <input [(ngModel)]="newCourse.syllabus" name="syllabus" required />
+  <br>
+
+  <label for="schedule">Schedule (comma-separated):</label>
+  <input [(ngModel)]="newCourse.schedule" name="schedule" required />
+  <br>
+
+  <button type="submit" class="submit-button">Add Course</button>
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Level</th>
+      <th>Duration</th>
+      <th>Price</th>
+      <th>Actions</th>
+      <th>Enrolled Users</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let course of courses">
+      <td>{{ course.name }}</td>
+      <td>{{ course.category }}</td>
+      <td>{{ course.level }}</td>
+      <td>{{ course.duration }}</td>
+      <td>{{ course.price | currency }}</td>
+      <td>
+        <button (click)="deleteCourse(course._id)" class="delete-button">Delete</button>
+        <button (click)="editCourse(course)" class="edit-button">Edit</button>
+      </td>
+      <td>
+        <div *ngIf="course.enrolledUsers.length; else noUsers">
+          <ul>
+            <li *ngFor="let user of course.enrolledUsers">{{ user }}</li>
+          </ul>
+        </div>
+        <ng-template #noUsers>No users enrolled</ng-template>
+      </td>
+    </tr>
+  </tbody>
+</table>

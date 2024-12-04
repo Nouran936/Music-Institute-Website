@@ -1,0 +1,63 @@
+.course-details-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.course-title {
+  font-size: 2rem;
+  color: #343434; /* Jet color */
+  margin-bottom: 20px;
+}
+
+.course-details {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.course-details p {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #555;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-btn {
+  background-color: #800000; /* Maroon color */
+  color: #fff;
+}
+
+.back-btn:hover {
+  background-color: #5a0000;
+}
+
+.enroll-btn {
+  background-color: #1f305e; /* Turquoise color */
+  color: #fff;
+}
+
+.enroll-btn:hover {
+  background-color:#FF7900; /* Delft Blue color */
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}

@@ -1,0 +1,16 @@
+<div class="dashboard">
+  <h2>Welcome, Admin!</h2>
+  <p>You are logged in as an admin.</p>
+
+  <div class="admin-actions">
+    <button (click)="manageCourses()">Manage Courses</button>
+    <button (click)="manageInstructors()">Manage Instructors</button>
+    <!-- <button (click)="manageEvents()">Manage Events</button> -->
+    <button (click)="manageUsers()">Manage Users</button>
+    <button (click)="viewMessages()">View Messages</button>
+    <button (click)="logout()">Logout</button>
+  </div>
+  <div class="dashboard-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

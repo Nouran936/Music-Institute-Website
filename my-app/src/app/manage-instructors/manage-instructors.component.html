@@ -1,0 +1,37 @@
+<h2>Manage Instructors</h2>
+<p *ngIf="errorMessage">{{ errorMessage }}</p>
+
+<form (ngSubmit)="addInstructor()">
+  <label for="name">Name:</label>
+  <input [(ngModel)]="newInstructor.name" name="name" required />
+
+  <label for="bio">Bio:</label>
+  <input [(ngModel)]="newInstructor.bio" name="bio" />
+
+  <label for="email">Email:</label>
+  <input [(ngModel)]="newInstructor.email" name="email" required type="email" />
+
+  <button type="submit">Add Instructor</button>
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Bio</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let instructor of instructors">
+      <td>{{ instructor.name }}</td>
+      <td>{{ instructor.bio }}</td>
+      <td>{{ instructor.email }}</td>
+      <td>
+        <button (click)="deleteInstructor(instructor._id)" class="delete-button">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+

@@ -1,0 +1,267 @@
+.about {
+  padding: 20px;
+  background-color: #fffff0ff; /* Ivory */
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: #800000ff; /* Maroon for the main heading */
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #343434ff; /* Jet text color */
+}
+
+.mission {
+  background-color: #d3d3d3ff; /* Timberwolf */
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.mission h3 {
+  color: #1f305eff; /* Delft Blue */
+}
+
+.instructors {
+  margin-top: 40px;
+}
+
+.instructor-item {
+  background-color: #d3d3d3ff; /* Timberwolf */
+  color: #343434ff; /* Jet */
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.instructor-item h4 {
+  font-size: 1.5rem;
+}
+
+.instructor-item p {
+  font-size: 1.1rem;
+}
+
+.about-us-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  color: #343434;
+}
+
+.basic-info {
+  max-width: 85%;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-with-image img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.info-section h2:hover {
+  color: #1f305eff;
+}
+
+.basic-info h2 {
+  color: #FF7900;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.info-section {
+  margin-bottom: 30px;
+}
+
+.info-section h2 {
+  color: #FF7900;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.text-with-image {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.text-with-image p {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.text-with-image img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.basic-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.achievements {
+  padding: 40px 20px;
+  background-color: #d3d3d3;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.achievement-cards {
+  display: flex;
+  /* justify-content: space-around; */
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.achievement-card {
+  width: 250px;
+  background-color: #fffff0ff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.achievement-card:hover {
+  transform: scale(1.05); /* Scale the card on hover */
+}
+
+
+.achievement-logo {
+  width: 60px; /* Adjust logo size */
+  height: 60px;
+  margin-bottom: 15px;
+  object-fit: contain; /* Maintains aspect ratio */
+}
+
+.achievement-icon {
+  font-size: 40px;
+  color: #800000; /* Maroon */
+}
+
+.achievement-card h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #343434;
+}
+
+.achievement-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+
+.team {
+  padding: 40px 20px;
+  background-color: #f8f9fa; /* Ivory */
+  text-align: center;
+}
+
+.team-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  width: 220px;
+  background-color: #fffff0ff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.team-card:hover{
+  transform: scale(1.05);
+}
+
+.team-photo {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.team-card h3 {
+  font-size: 18px;
+  color: #343434;
+}
+
+.team-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.reviews {
+  padding: 40px 20px;
+  background-color: #d3d3d3;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.review-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.review-card {
+
+  width: 250px;
+  background-color: #fffff0ff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.review-card:hover{
+  transform: scale(1.05);
+}
+
+.review-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.review-text {
+  font-size: 16px;
+  font-style: italic;
+  color: #343434;
+  margin-bottom: 10px;
+}
+
+.review-name {
+  font-weight: bold;
+  color: #343434;
+}
+
+.review-position {
+  font-size: 14px;
+  color: #666;
+}
+
+

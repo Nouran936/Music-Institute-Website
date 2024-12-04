@@ -1,0 +1,20 @@
+<h2>Edit User</h2>
+<form (ngSubmit)="updateUser()">
+  <label for="name">Name:</label>
+  <input [(ngModel)]="name" name="name" required />
+  <br>
+
+  <label for="email">Email:</label>
+  <input [(ngModel)]="email" name="email" type="email" required />
+  <br>
+
+  <!-- <label for="role">Role:</label>
+  <select [(ngModel)]="role" name="role" required>
+    <option value="admin">Admin</option>
+    <option value="instructor">Instructor</option>
+    <option value="student">Student</option>
+  </select> -->
+  <!-- <br> -->
+
+  <button type="submit">Update User</button>
+</form>

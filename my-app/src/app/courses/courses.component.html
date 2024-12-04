@@ -1,0 +1,32 @@
+<div class="courses-container">
+  <div class="filter-section">
+    <input type="text" placeholder="Search for a course..." [(ngModel)]="searchTerm" class="search-bar" (input)="applyFilters()">
+    <select [(ngModel)]="selectedCategory" class="category-filter" (change)="applyFilters()">
+      <option value="">All Categories</option>
+      <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+    </select>
+  </div>
+
+
+
+  <div *ngIf="filteredCourses.length > 0; else noCourses" class="courses-grid">
+    <div *ngFor="let course of filteredCourses" class="course-card">
+      <h2 class="course-title">{{course.name}}</h2>
+      <p class="course-description">{{course.description}}</p>
+      <p><strong>Duration:</strong>{{course.duration}}</p>
+      <button class="btn btn-primary" (click)="goToCourseDetails(course._id)">View Details</button>
+    </div>
+  </div>
+
+  <ng-template #noCourses>
+    <p>No courses available matching your criteria</p>
+  </ng-template>
+
+  <div class="pagination-controls">
+    <button class="btn" (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }}</span>
+    <button class="btn" (click)="nextPage()" [disabled]="filteredCourses.length < itemsPerPage">Next</button>
+  </div>
+</div>
+
+
